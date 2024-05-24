@@ -1,14 +1,29 @@
 {
-  "name": "backend",
+  "name": "sarvin-",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
   "dependencies": {
-    "expres": "^0.0.5"
+    "cords": "^1.0.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.3.4",
+    "moran": "^0.0.11",
+    "morgan": "^1.10.0",
+    "mssql": "^10.0.2",
+    "mysql2": "^3.9.7",
+    "underscore": "^1.13.6",
+    "uuid": "^9.0.1"
   }
 }

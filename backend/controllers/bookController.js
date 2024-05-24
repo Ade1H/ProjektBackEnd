@@ -1,6 +1,6 @@
-const connectionMySQL = require('./../connectionMySQL')
+const connectionMySQL = require('../mysql-database')
 
-exports.getBooks = (async(req, res) => {
+exports.getSongs = (async(req, res) => {
     let sql = "SELECT * FROM bok";
     try{
         await connectionMySQL.query(sql, (error, results, fields) => {
@@ -19,7 +19,6 @@ exports.getBooks = (async(req, res) => {
 exports.getBook = (async(req, res) => {
     const { id } = req.params;
 
-    // Vi använder Prepared Statements genom ? i SQL-koden och att ange paramatern i query-funktionen
     let sql = "SELECT * FROM bok WHERE bokId = ?";
     try{
         await connectionMySQL.query(sql,[id], (error, results, fields) => {

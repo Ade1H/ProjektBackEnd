@@ -12,3 +12,10 @@ I frontend skriver vi i terminalen:
 npm install
 npm run dev
 
+
+
+
+
+bn
+
+

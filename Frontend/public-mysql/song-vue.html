@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue - Introduktion</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div id="app">
+    <h1>{{ msg }}</h1>
+    <ul>
+        <li v-for="song in songs">{{ song.title }} {{ song.artist }} {{ song.genre }}</li>
+    </ul>
+
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                msg: 'Mina låter:',
+                songs: []
+            }
+        },
+            mounted(){
+                fetch('http://localhost:3000/api/songs')
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        console.log(data);
+                        this.songs = data;
+                    });
+            }
+    }).mount('#app')
+</script>
+
+</body>
+</html>

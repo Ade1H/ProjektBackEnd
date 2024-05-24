@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Song</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<form method="POST" id="formSong">
+
+    <p>Title:</p>
+    <p><input type="text" id="songTitle" name="songName"></p>
+    <p>Artist:</p>
+    <p><input type="text" id="songArtist" name="songArtist"></p>
+    <!-- <p>ID:</p>
+    <p><input type="text" id="songId" name="songId"></p> -->
+    <p>Genre:</p>
+    <p><input type="text" id="songGenre" name="songGenre"></p>
+    <p><input type="submit" value="Add Song"></p>
+</form>
+<p id="elOutput"></p>
+<p><a href="song.html">View All Songs</a></p>
+
+<script src="js/fetch-song-post-sql.js"></script>
+</body>
+</html>
